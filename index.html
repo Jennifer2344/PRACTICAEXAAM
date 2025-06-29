@@ -3,380 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Composta Viva - Venta Casera</title>
+  <title>EL RINCÓN DEL ABONO-VENTA </title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --verde-suave: #6d9f4b;
-      --beige: #fefae0;
-      --tierra: #a67c52;
-      --gris-claro: #eaeaea;
-      --negro: #2c2c2c;
-      --blanco: #ffffff;
-    }
-
-    body {
-      font-family: 'Quicksand', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-image: url('foo.jpeg'); /* Cambia esto por tu imagen de fondo */
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      color: var(--negro);
-    }
-    
-
-    header {
-      background-color: rgba(109, 159, 75, 0.9);
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.6rem;
-      flex: 1;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    }
-
-    .logo {
-      width: 80px;
-      border-radius: 50%;
-      position: absolute;
-      right: 2rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    }
-
-    nav {
-      background-color: rgba(166, 124, 82, 0.9);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      position: relative;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background-color: white;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    section {
-      padding: 2rem;
-      background-color: rgba(255,255,255,0.9);
-      margin: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      color: var(--verde-suave);
-    }
-
-    .imagenes-centradas {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-
-    .imagenes-centradas img {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 1rem;
-      text-align: center;
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background-color: var(--verde-suave);
-      color: white;
-    }
-
-    .carrusel {
-      margin-top: 2rem;
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .carrusel h2 {
-      color: var(--tierra);
-    }
-
-    .carrusel-contenido {
-      display: flex;
-      animation: deslizar 20s infinite linear;
-    }
-
-    .producto {
-      position: relative;
-      margin-right: 1rem;
-    }
-
-    .producto img {
-      width: 280px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    }
-
-    .precio {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 5px 10px;
-      border-radius: 5px;
-      color: #2c2c2c;
-      font-weight: bold;
-      border: 1px solid #999;
-    }
-
-    @keyframes deslizar {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .extra-info {
-      margin-top: 3rem;
-      background-color: var(--beige);
-      padding: 2rem;
-      border-radius: 10px;
-    }
-
-    .extra-info h3 {
-      color: var(--tierra);
-    }
-
-    .extra-imagenes {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-
-    .extra-imagenes img {
-      width: 220px;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-    }
-
-    iframe {
-      width: 100%;
-      height: 250px;
-      border: none;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-
-    footer {
-      background-color: rgba(109, 159, 75, 0.95);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      text-align: left;
-      gap: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .footer-col {
-      flex: 1;
-      min-width: 200px;
-    }
-
-    .footer-col h4 {
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-    }
-
-    .footer-col p, .footer-col a {
-      font-size: 0.95rem;
-      color: #f0f0f0;
-      text-decoration: none;
-    }
-
-    .subir {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #d7f9c2;
-      padding: 0.5rem 1rem;
-      color: #2f5d3f;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-     nav {
-      background-color: rgba(166, 124, 82, 0.9);
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      background-color: rgba(255, 255, 255, 0.92);
-      margin: 2rem;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    h2, h3 {
-      text-align: center;
-      color: var(--verde);
-    }
-
-    .imagenes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-
-    .imagenes img {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .video {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .video iframe {
-      width: 90%;
-      height: 300px;
-      border-radius: 10px;
-      border: none;
-    }
-
-    .boton-wsp {
-      display: block;
-      width: fit-content;
-      margin: 2rem auto 0;
-      background-color: #25d366;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    .galeria img {
-      width: 220px;
-      border-radius: 8px;
-    }
-
-    .faq {
-      margin-top: 2rem;
-    }
-
-    .faq details {
-      background: #fff;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .faq summary {
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: rgba(109, 159, 75, 0.95);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-    }
-
-    footer p {
-      margin: 0.3rem 0;
-    }
-    img{
-        height: 200px;
-        width: 200px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>EL RINCÓN DEL ABONO</h1>
-    <img src="logo2.jpeg" alt="Logo Composta Viva" class="logo">
-  </header>
+  <header class="header-fijo">
+  <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('activo')">☰</button>
+  <h1>EL RINCÓN DEL ABONO</h1>
+  <img src="logo2.jpeg" alt="Logo Composta Viva" class="logo">
+</header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#beneficios">Beneficios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#beneficios">Beneficios</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section class="eslogan">
+  <h2>🌱 “Transformamos residuos en vida” 🌱</h2>
+
+</section>
 
   <section id="inicio">
     <h2>¿Qué es la composta?</h2>
     <p>La composta es un proceso natural de descomposición de residuos orgánicos que genera un fertilizante natural ideal para la agricultura y jardinería. Reduce basura, mejora el suelo y apoya al medio ambiente.</p>
-    
     <div class="imagenes-centradas">
       <img src="fo.jpeg" alt="Proceso de composta">
       <img src="Con los restos de alimentos de tu casa que fueron….jpeg" alt="Composta natural">
@@ -385,7 +37,7 @@
   </section>
 
   <section id="beneficios">
-       <h1>Beneficios</h1>
+    <h1>Beneficios</h1>
     <table>
       <tr>
         <th>Beneficio</th>
@@ -415,7 +67,7 @@
     </table>
 
     <div class="carrusel">
-      <h2>Catalogo</h2>
+      <h2>Catálogo</h2>
       <div class="carrusel-contenido">
         <div class="producto"><img src="ven1.jpeg" alt="Imagen 1"><div class="precio"></div></div>
         <div class="producto"><img src="ven2.jpeg" alt="Imagen 2"><div class="precio"></div></div>
@@ -436,15 +88,6 @@
     </div>
   </section>
 
-  
-    
-  </style>
-</head>
-<body>
-
-
-  
-
   <section id="tipos">
     <h2>Tipos de composta que te ofrecemos</h2>
     <div class="imagenes">
@@ -462,95 +105,49 @@
       </div>
     </div>
   </section>
+
   <section id="servicios">
-  <h2>Nuestros Servicios</h2>
-  <div class="servicios-grid">
-    <div class="servicio">
-      <img src="4.jpeg" alt="Venta de composta">
-      <h3>Venta de composta</h3>
-      <p>Composta casera 100% orgánica lista para usar en huertos, jardines o macetas.</p>
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-grid">
+      <div class="servicio">
+        <img src="4.jpeg" alt="Venta de composta">
+        <h3>Venta de composta</h3>
+        <p>Composta casera 100% orgánica lista para usar en huertos, jardines o macetas.</p>
+      </div>
+      <div class="servicio">
+        <img src="asesoria.jpg" alt="Asesoría personalizada">
+        <h3>Asesoría personalizada</h3>
+        <p>Te enseñamos cómo iniciar tu composta en casa o cómo aprovechar la que ya compraste.</p>
+      </div>
+      <div class="servicio">
+        <img src="kit.jpeg" alt="Kits ecológicos">
+        <h3>Kits ecológicos</h3>
+        <p>Incluyen composta + semillas + macetas biodegradables para empezar tu huerto urbano.</p>
+      </div>
+      <div class="servicio">
+        <img src="Descargar servicio de entrega online gratis.jpeg" alt="Entrega a domicilio">
+        <h3>Entrega a domicilio</h3>
+        <p>Enviamos tu pedido directo a tu casa en Donato Guerra y alrededores.</p>
+      </div>
     </div>
-    <div class="servicio">
-      <img src="asesoria.jpg" alt="Asesoría personalizada">
-      <h3>Asesoría personalizada</h3>
-      <p>Te enseñamos cómo iniciar tu composta en casa o cómo aprovechar la que ya compraste.</p>
-    </div>
-    <div class="servicio">
-      <img src="kit.jpeg" alt="Kits ecológicos">
-      <h3>Kits ecológicos</h3>
-      <p>Incluyen composta + semillas + macetas biodegradables para empezar tu huerto urbano.</p>
-    </div>
-    <div class="servicio">
-      <img src="Descargar servicio de entrega online gratis.jpeg" alt="Entrega a domicilio">
-      <h3>Entrega a domicilio</h3>
-      <p>Enviamos tu pedido directo a tu casa en Donato Guerra y alrededores.</p>
-    </div>
-  </div>
-</section>
-
-<style>
-#servicios {
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.servicios-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.servicio {
-  background-color: #fefae0;
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.servicio:hover {
-  transform: scale(1.03);
-}
-
-.servicio img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
-}
-
-.servicio h3 {
-  color: #6d9f4b;
-  margin-bottom: 0.5rem;
-}
-</style>
-
-  
-
-  
+  </section>
 
   <section id="galeria">
     <h2>Galería </h2>
     <div class="imagenes galeria">
       <img src="Imagen de WhatsApp 2025-06-25 a las 19.06.15_699877e1.jpg" alt="Macetas">
       <img src="Imagen de WhatsApp 2025-06-25 a las 19.06.19_9915a0f6.jpg" alt="Jardines">
-      <img src="nat.jpg"Huertos">
-       <img src="ta.jpg" alt="Macetas">
+      <img src="nat.jpg" alt="Huertos">
+      <img src="ta.jpg" alt="Macetas">
       <img src="35b51f27-7a60-49c5-aa28-daeeb88e8cad.jpeg" alt="Jardines">
-      <img src="Cap 1_ Introducción a la Agricultura Urbana - Issuu.jpeg"Huertos">
+      <img src="Cap 1_ Introducción a la Agricultura Urbana - Issuu.jpeg" alt="Huertos">
     </div>
   </section>
-<section class="video">
+
+  <section class="video">
     <h2>¿Cómo se crea nuestra composta?</h2>
     <iframe src="video.mp4" title="Cómo usar composta"></iframe>
   </section>
-  
 
   <section id="faq" class="faq">
     <h2>Preguntas frecuentes</h2>
@@ -580,7 +177,6 @@
     <a class="boton-wsp" href="https://wa.me/7261311310" target="_blank">Haz tu pedido por WhatsApp</a>
   </section>
 
-
   <section id="contacto">
     <h2>Ubicación</h2>
     <iframe src="https://es.m.wikipedia.org/wiki/Archivo:Mexico_Estado_de_Mexico_Donato_Guerra_location_map.svg"></iframe>
@@ -599,10 +195,10 @@
         <p><a href="#contacto">Contacto</a></p>
       </div>
       <div class="footer-col">
-  <h4>Contacto</h4>
-  <p><a href="https://mail.google.com/mail/?view=cm&to=jm2278194@gmail.com" target="_blank">📧 jm2278194@gmail.com</a></p>
-  <p><a href="tel:7261311310">📞 7261311310</a></p>
-</div>
+        <h4>Contacto</h4>
+        <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=jm2278194@gmail.com" target="_blank">📧 jm2278194@gmail.com</a></p>
+        <p><a href="tel:7261311310">📞 7261311310</a></p>
+      </div>
       <div class="footer-col">
         <h4>Síguenos</h4>
         <p><a href="https://www.instagram.com/jenny.mb23?igsh=dWhwNW5zbTg4aXF0&utm_source=qr" target="_blank">📷 Instagram</a></p>
@@ -612,7 +208,11 @@
     <p>Jennifer Maldonado Barrientos.</p>
     <a href="#inicio" class="subir">↑ Subir</a>
   </footer>
-  <!-- Código completo mejorado (por espacio está dividido en partes). Pide el resto si no ves todo aquí. -->
 
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('nav').classList.toggle('activo');
+    });
+  </script>
 </body>
 </html>
