@@ -183,6 +183,23 @@
     <iframe src="https://es.m.wikipedia.org/wiki/Archivo:Mexico_Estado_de_Mexico_Donato_Guerra_location_map.svg"></iframe>
   </section>
 
+ <section id="registro">
+  <h2>Contáctanos</h2>
+  <form id="formulario-contacto">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+    <button type="submit">Enviar</button>
+
+    <p id="mensaje-estado" class="mensaje-estado"></p>
+  </form>
+</section>
   <footer>
     <div class="footer-grid">
       <div class="footer-col">
@@ -223,7 +240,27 @@
       enlace.addEventListener('click', () => {
         menu.classList.remove('activo');
       });
+
+      
     });
+    document.getElementById('formulario-contacto').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById('nombre').value.trim();
+  const correo = document.getElementById('correo').value.trim();
+  const mensaje = document.getElementById('mensaje').value.trim();
+  const mensajeEstado = document.getElementById('mensaje-estado');
+
+  if (nombre === '' || correo === '' || mensaje === '') {
+    mensajeEstado.textContent = '❌ Formulario incompleto. Por favor llena todos los campos.';
+    mensajeEstado.style.color = 'red';
+  } else {
+    mensajeEstado.textContent = '✅ Enviado con éxito, gracias por comunicarte.';
+    mensajeEstado.style.color = 'green';
+    // Opcional: limpiar campos
+    this.reset();
+  }
+});
  
 
   </script>
