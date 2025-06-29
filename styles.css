@@ -135,7 +135,7 @@ th {
 
 .carrusel-contenido {
   display: flex;
-  animation: deslizar 20s infinite linear;
+  animation: deslizar 5s infinite linear;
 }
 
 .producto {
